@@ -14,6 +14,8 @@ Domain Path: /languages
 Text Domain: my-toolset
 */
 
+//Google Map API key
+$googleMapApiKey = 'AIzaSyA7xARpb99M-tbyfkhy1OQrjWky7FO1qJw';
 
 //Custom Fields Work
 
@@ -29,6 +31,8 @@ function flora_events_metabox_html($post){
     $eventLocationLat = get_post_meta($post->ID, 'eventLocationLat', true);
     $eventLocationLng = get_post_meta($post->ID, 'eventLocationLng', true);
     $eventUrl = get_post_meta($post->ID, 'eventUrl', true);
+
+    global $googleMapApiKey;
     ?>
     
     <table>
@@ -225,6 +229,9 @@ function flora_events_func($atts){
         
     
     ob_start();
+
+    global $googleMapApiKey;
+
     $today = date('Y-m-d');
     $args = array(
                 'post_type'     =>  'floraevents',
@@ -321,7 +328,7 @@ function flora_events_func($atts){
         
     }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7xARpb99M-tbyfkhy1OQrjWky7FO1qJw&callback=floraeventmap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<?=$googleMapApiKey?>&callback=floraeventmap"></script>
     <?php
 
     $output = ob_get_contents();

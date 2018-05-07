@@ -1,4 +1,3 @@
-<?php echo get_post_type_archive_link('floraevents'); ?>
 <style>
     #flora-map{
         width:100%;
@@ -70,7 +69,7 @@
     }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7xARpb99M-tbyfkhy1OQrjWky7FO1qJw&libraries=places&callback=floramap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?=$googleMapApiKey?>&libraries=places&callback=floramap"></script>
 
 
 
