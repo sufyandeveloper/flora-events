@@ -15,7 +15,7 @@ Text Domain: my-toolset
 */
 
 //Google Map API key
-$googleMapApiKey = 'AIzaSyA7xARpb99M-tbyfkhy1OQrjWky7FO1qJw';
+$googleMapApiKey = 'Insert Your Key Here';
 
 //Custom Fields Work
 
